@@ -1,0 +1,18 @@
+@use "../abstracts" as *;
+
+.mypageTopClass {
+  @include center;
+  .userInfo {
+    background-color: lightgray;
+    width: 600px;
+    padding: 20px 50px;
+    display: flex;
+    margin: 60px 0px 0px 0px;
+    .fa-user {
+      font-size: 220px;
+    }
+    .user {
+        
+    }
+  }
+}
