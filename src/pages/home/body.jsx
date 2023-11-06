@@ -34,11 +34,11 @@ function Body(){
 
         const updateImageIndex = () => {
             const currentTime = parseInt(hour) * 10000 + parseInt(minute) * 100 + parseInt(second);
-            if (currentTime <= 235900) {
+            if (currentTime > 235950 && currentTime <= 235955) {
                 setImageIndex(1); // secondImg
-            } else if (currentTime <= 80000) {
+            } else if (currentTime > 235945 && currentTime <= 235950) {
                 setImageIndex(2); // thirdImg
-            } else if (currentTime == 0) {
+            } else if (currentTime == 235945) {
                 setImageIndex(3); // thirdImg
             }
         };
@@ -65,7 +65,7 @@ function Body(){
         return (
           <div>
             <img src={images[imageIndex]}></img>
-            <p>{hour} : {minute}</p>
+            <p>{hour} : {minute} : {second}</p>
           </div>
         );
     };
