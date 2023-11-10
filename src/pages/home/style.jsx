@@ -3,7 +3,9 @@ import backgroundImg from "../../assets/mainBackground.png";
 import recyclebinImg from "../../assets/recylebinImg.png";
 import storeImg from "../../assets/storeImg.svg";
 import userImg from "../../assets/userImg.svg";
-
+import lipStickImg from "../../assets/립스틱.png"
+import toothPasteImg from "../../assets/치약.png"
+import rubbyGloveImg from "../../assets/고무장갑.png"
 export const HomeBody = styled.div`
   font-family: nanumgothic;
   text-align: center;
@@ -54,6 +56,36 @@ export const HomeBody = styled.div`
         height: 70px;
         margin-right: 17px;
         margin-top: 15px;
+      }
+      #lipStick {
+        background-image: url(${lipStickImg});
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        width: 50px;
+        height: 100px;
+        margin-top: 15px;
+        margin-right:25px
+      }
+      #rubbyGlove {
+        background-image: url(${rubbyGloveImg});
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        width: 50px;
+        height: 100px;
+        margin-top: 15px;
+        margin-right:25px
+      }
+      #toothPaste {
+        background-image: url(${toothPasteImg});
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        width: 50px;
+        height: 100px;
+        margin-top: 15px;
+        margin-right:25px
       }
       #font1 {
         font-size: 12px;

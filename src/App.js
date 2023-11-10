@@ -7,6 +7,7 @@ import Start from "./pages/start/start";
 import Signup from "./pages/signup";
 import Game from "./pages/game";
 
+
 function App() {
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
           <Route path="/giftshop/:product_id" element={<GiftDetail />}></Route>
           <Route path="/mypage" element={<MyPage />}></Route>
           <Route path="/signup" element={<Signup />}></Route>
+    
         </Routes>
       </Router>
     </>
