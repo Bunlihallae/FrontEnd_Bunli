@@ -1,20 +1,20 @@
-import MenuBar from "../components/menuBar";
-import productList from "../giftshop/product";
+import { useState } from "react";
+import Modal from "./modal";
+import React from "react";
 
 const MyPage = () => {
+  // 모달창 노출 여부 state
+  const [modalOpen, setModalOpen] = useState(true);
+
+  // 모달창 노출
+  const showModal = () => {
+    setModalOpen(true);
+  };
+
   return (
     <div>
-      <MenuBar />
-      <div className="mypageTopClass">
-        <div className="userInfo">
-          <i class="fa-solid fa-user"></i>
-          <div className="user">
-            <div className="name">박준형</div>
-            <div className="mileage">21300p</div>
-          </div>
-        </div>
-        <div className="giftInfo"></div>
-      </div>
+      <button onClick={showModal}>모달 띄우기</button>
+      {modalOpen && <Modal setModalOpen={setModalOpen}></Modal>}
     </div>
   );
 };
