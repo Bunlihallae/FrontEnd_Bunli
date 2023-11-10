@@ -10,3 +10,12 @@ export const userInfoApi = (token) => {
     },
   });
 };
+
+// 로그아웃
+export const userLogoutApi = (token) => {
+  return axios.get(`${url}/user/delete`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+};
