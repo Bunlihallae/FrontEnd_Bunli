@@ -1,29 +1,94 @@
 import styled from "styled-components";
-export const HomeBody = styled.div`
-    text-align: center;
-    font-family: nanumgothic;
+import backgroundImg from "../../assets/mainBackground.png";
+import recyclebinImg from "../../assets/recylebinImg.png";
+import storeImg from "../../assets/storeImg.svg";
+import userImg from "../../assets/userImg.svg";
 
-    // 비우기 버튼
-    #removeBtn{
-        display: inline-block;
-        width: 20%;
-        margin: 0 auto;
-        font-size: 170%;
-        cursor: pointer;
-        line-height: 2.5;
-        text-align: center;
-        transition: all 0.3s;
-        border-radius: 10px;
+export const HomeBody = styled.div`
+    font-family: nanumgothic;
+    text-align: center;
+
+    #background {
+        height: 100vh;
+        background-image: url(${backgroundImg});
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+
+        #iconBox{
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            color: white;
+            width: 100px;
+
+            #mypage{
+            background-image: url(${userImg});
+            background-repeat: no-repeat;
+            background-size: 100%;
+            position: relative;
+            width: 65px;
+            height: 65px;
+            margin-right: 17px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            }
+
+            #game{
+                background-image: url(${recyclebinImg});
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: center;
+                width: 100px;
+                height: 100px;
+                margin-top: 15px;
+            }
+            #store{
+                background-image: url(${storeImg});
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: center;
+                width: 70px;
+                height: 70px;
+                margin-right: 17px;
+                margin-top: 15px;
+            }
+            #font1{
+                font-size: 12px;
+                margin-right: 19px;
+                margin-top: 5px;
+            }
+            #font2{
+                font-size: 12px;
+                margin-right: 33px;
+                margin-top: 5px;
+            }
+            #font3{
+                font-size: 12px;
+                margin-right: 40px;
+                margin-top: 13px;
+                color: white;
+            }
+        }
     }
-    #removeBtn:hover{
-        color: #A67951;
-    }
+
     //쓰레기 이미지 박스
     #trashBox{
-        margin-top: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-top: 40px;
         margin-bottom: 40px;
+        margin-left: 0;
+        margin-right:0;
+        width: 300px;
+        
+
         img:nth-child(1) {
-            width: 20%;
+            width: 200px;
             height: 20%;
             text-align: center;
             padding-top:3px;
@@ -32,6 +97,22 @@ export const HomeBody = styled.div`
 
         p:nth-child(2) {
             font-size: 250%;
+        }
+    
+    }
+
+    // 모바일에서는 하단 바에 아이콘
+    @media screen and (max-width: 600px) {
+        #iconBox{
+            align-items: center;
+            text-align: center;
+            flex-direction: row;
+        }
+        #trashBox{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     }
 

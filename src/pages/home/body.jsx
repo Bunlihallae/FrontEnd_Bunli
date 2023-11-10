@@ -4,6 +4,10 @@ import firstImg from '../../assets/stage1_v2.png';
 import secondImg from '../../assets/stage5_v3.png';
 import thirdImg from '../../assets/stage-3.png';
 import fourthImg from '../../assets/stage-4.png';
+import backgroundImg from "../../assets/mainBackground.png";
+import userImg from "../../assets/userImg.svg";
+import { useNavigate } from "react-router-dom";
+
 
 function Body(){
 
@@ -34,11 +38,11 @@ function Body(){
 
         const updateImageIndex = () => {
             const currentTime = parseInt(hour) * 10000 + parseInt(minute) * 100 + parseInt(second);
-            if (currentTime > 235950 && currentTime <= 235955) {
+            if (currentTime > 230000 && currentTime <= 235955) {
                 setImageIndex(1); // secondImg
-            } else if (currentTime > 235945 && currentTime <= 235950) {
+            } else if (currentTime > 110000 && currentTime <= 230000) {
                 setImageIndex(2); // thirdImg
-            } else if (currentTime == 235945) {
+            } else if (currentTime == 110000) {
                 setImageIndex(3); // thirdImg
             }
         };
@@ -70,19 +74,40 @@ function Body(){
         );
     };
 
-    //버튼 클릭 시
-    const handleOnClick = (e) => {
-        //게임 화면으로 라우팅
-        console.log("게임 화면으로 이동")
+    const navigate = useNavigate();
+
+    // 유저 아이콘 클릭 시
+    const handleOnMypage = (e) => {
+        // 마이페이지로 라우팅
+        navigate("/mypage")
+    }
+
+    // 휴지통 아이콘 클릭 시
+    const handleOnGame = (e) => {
+        // 게임으로 라우팅
+        console.log("게임 모달창 띄우기")
+    }
+
+    // 상점 아이콘 클릭 시
+    const handleOnStore = (e) => {
+        //상점으로 라우팅
+        navigate("/giftshop")
     }
 
     return(
         <HomeBody>
-            <div>
+            <div id="background">
                 <div id="trashBox">
                     <Timer hh="24" mm="0" ss="0"/>
                 </div>
-                <button onClick={handleOnClick} id="removeBtn">비우기</button>
+                <div id="iconBox">
+                    <p id="mypage" onClick ={handleOnMypage}></p>
+                    <p id="font1">마이페이지</p>
+                    <p id="game" onClick={handleOnGame}></p>
+                    <p id="font2">휴지통</p>
+                    <p id="store" onClick ={handleOnStore}></p>
+                    <p id="font3">상점</p>
+                </div>
             </div>
         </HomeBody>
         
