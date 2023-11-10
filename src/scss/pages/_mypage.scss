@@ -15,62 +15,98 @@
   @include center;
   .ModalBorder {
     position: relative;
-    padding: 26px 16px;
     width: 360px;
-    height: 500px;
-    background-color: rgb(236, 236, 236);
-    border-radius: 12px;
-    .toHome {
-      position: absolute;
-      right: 8px;
-      top: 2px;
-      width: 34px;
-      height: 34px;
-      border-radius: 13px;
-      font-size: 18px;
-    }
-    .userBox {
+    height: 530px;
+    background-color: #fff;
+    border: 2px solid gray;
+    .modalTop {
       display: flex;
-      img {
-        width: 122px;
-      }
-      .userInfo {
-        margin: 1px 0px 0px 14px;
-        .userName {
-          font-size: 24px;
-        }
-        .userRegion {
-          font-size: 15px;
-          margin: 12px 0px 0px 2px;
-          min-width: 180px;
-        }
-        .userMileage {
-          font-size: 16px;
-          margin: 10px 0px 0px 4px;
-        }
-        .logout {
-          cursor: pointer;
-          width: 66px;
-          height: 26px;
-          margin: 8px 0px 0px 3px;
-        }
-      }
-    }
-    .purchaseLine {
-      margin: 18px 0px 14px;
-    }
-    .giftList {
-      overflow-y: scroll;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 12px;
+      align-items: center;
       width: 100%;
-      height: 254px;
-
-      .product {
+      height: 30px;
+      background-color: rgb(184, 204, 217);
+      padding-left: 6px;
+      color: rgb(90, 89, 89);
+    }
+    .myPageBox {
+      margin-top: 14px;
+      padding-left: 18px;
+      .toHome {
+        position: absolute;
+        right: 4px;
+        top: 2px;
+        width: 23px;
+        height: 23px;
+        font-size: 14px;
+        font-weight: bold;
+        border: 1px solid lightgray;
+        border-bottom: 2px solid gray;
+        border-right: 2px solid gray;
+      }
+      .userBox {
+        display: flex;
         img {
-          width: 140px;
+          width: 120px;
         }
+        .userInfo {
+          margin: 1px 0px 0px 14px;
+          .userName {
+            font-size: 22px;
+          }
+          .userRegion {
+            font-size: 14px;
+            margin: 4px 0px 0px 2px;
+            min-width: 180px;
+          }
+          .userMileage {
+            font-size: 15px;
+            margin: 6px 0px 0px 2px;
+          }
+          .userTime {
+            font-size: 15px;
+            margin: 6px 0px 0px 4px;
+          }
+          .logout {
+            cursor: pointer;
+            width: 66px;
+            height: 26px;
+            margin: 8px 0px 0px 3px;
+          }
+        }
+      }
+      .purchaseLine {
+        margin: 18px 0px 14px;
+      }
+      .giftList {
+        overflow-y: scroll;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 12px;
+        width: 100%;
+        height: 254px;
+
+        .product {
+          img {
+            width: 140px;
+          }
+        }
+      }
+    }
+    .OKbutton {
+      background-color: lightgray;
+      width: 100%;
+      height: 38px;
+      position: relative;
+      button {
+        position: absolute;
+        right: 12px;
+        width: 77px;
+        margin-top: 6px;
+        font-size: 16px;
+        border: 1px solid lightgray;
+        border-bottom: 2px solid gray;
+        border-right: 2px solid gray;
+        color: rgb(94, 92, 92);
       }
     }
   }

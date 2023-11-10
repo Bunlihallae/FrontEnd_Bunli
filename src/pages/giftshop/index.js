@@ -58,15 +58,19 @@ const Giftshop = () => {
         </div>
         <div className="category">
           <Button onClick={click0} data-checked={region === "충청도"}>
+            <i class="fa-solid fa-folder" style={{ color: "#ffff88" }}></i>
             충청도
           </Button>
           <Button onClick={click1} data-checked={region === "강원도"}>
+            <i class="fa-solid fa-folder" style={{ color: "#ffff88" }}></i>
             강원도
           </Button>
           <Button onClick={click2} data-checked={region === "전라도"}>
+            <i class="fa-solid fa-folder" style={{ color: "#ffff88" }}></i>
             전라도
           </Button>
           <Button onClick={click3} data-checked={region === "제주도"}>
+            <i class="fa-solid fa-folder" style={{ color: "#ffff88" }}></i>
             제주도
           </Button>
         </div>

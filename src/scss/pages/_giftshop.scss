@@ -34,22 +34,21 @@
     display: flex;
     align-items: center;
     margin: 8px 0px 0px 0px;
-    padding: 10px 18px;
+    padding: 6px 6px 0px;
     width: 100vw;
-    background-color: #f3f3f3;
-
+    border-bottom: 1px solid lightgray;
     Button {
-      background-color: inherit;
-      text-align: center;
-      width: 67px;
-      height: 20px;
+      padding-left: 9px;
+      border: 1px solid lightgray;
+      background-color: #ebebeb;
+
+      text-align: left;
+      width: 97px;
+      height: 30px;
       font-size: 16px;
-      border: none;
-    }
-    Button::after {
-      content: "|";
-      margin: 0px 0px 0px 10px;
-      color: lightgray;
+      i {
+        margin-right: 6px;
+      }
     }
 
     Button[data-checked="true"] {

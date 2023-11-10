@@ -23,8 +23,8 @@ const MenuBar = () => {
           <i class="fa-solid fa-gift"></i>
         </Link>
         {token ? (
-          <Link to="/mypage" style={{ textDecoration: "none", color: "black" }}>
-            <div className="mypage">마이페이지</div>
+          <Link to="/home" style={{ textDecoration: "none", color: "black" }}>
+            <div className="mypage">돌아가기</div>
           </Link>
         ) : (
           <></>
@@ -43,7 +43,7 @@ const MenuBar = () => {
               marginLeft: "3px",
             }}
           >
-            <div className="mypage">로그인</div>
+            <div className="mypage">돌아가기</div>
           </Link>
         )}
       </div>
