@@ -88,7 +88,7 @@ function Body() {
 
     return (
       <div>
-        <img src={images[imageIndex]}></img>
+        {/* <img src={images[imageIndex]}></img> */}
         <p>
           {hour} : {minute} : {second}
         </p>

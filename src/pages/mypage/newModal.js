@@ -1,10 +1,12 @@
-import { userInfoApi } from "../../apis/userApi";
+import { userInfoApi, userLogoutApi } from "../../apis/userApi";
 import { useState, useEffect } from "react";
 import userImg from "../../assets/userImg.svg";
 import productList from "../giftshop/product.js";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function NewModal() {
+  const navigate = useNavigate();
+
   const [info, setInfo] = useState({
     user_id: 1,
     user_name: "박준형",
@@ -22,6 +24,16 @@ function NewModal() {
       });
     } catch (error) {
       console.log(error);
+    }
+  };
+
+  const Logout = async (token) => {
+    try {
+      await userLogoutApi(token).then((res) => {
+        navigate("/");
+      });
+    } catch (err) {
+      console.log(err);
     }
   };
 
@@ -43,6 +55,9 @@ function NewModal() {
             <div className="userMileage">
               현재 마일리지 : {info.user_mileage}P
             </div>
+            <button onClick={Logout} className="logout">
+              로그아웃
+            </button>
           </div>
         </div>
         <div className="purchaseLine">

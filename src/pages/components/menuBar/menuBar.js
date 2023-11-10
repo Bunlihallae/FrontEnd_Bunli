@@ -12,7 +12,7 @@ const MenuBar = () => {
 
   return (
     <div className="menu">
-      <Link to="/" style={{ textDecoration: "none", color: "black" }}>
+      <Link to="/home" style={{ textDecoration: "none", color: "black" }}>
         <div className="menuLeft">
           <img src={cycle} alt="cycle" />
           <div>분리할래?</div>

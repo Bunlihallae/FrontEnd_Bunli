@@ -152,7 +152,7 @@ const Game = () => {
     <div>
       <div className="gameMainFirstClass">
         <NewSideBar />
-        {!isNumber1 && trashList ? (
+        {!isNumber1 ? (
           <Modal
             num={1}
             trash_id={trashList.Trash[0].trash_id}

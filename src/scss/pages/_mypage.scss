@@ -35,22 +35,29 @@
         width: 122px;
       }
       .userInfo {
-        margin: 8px 0px 0px 14px;
+        margin: 1px 0px 0px 14px;
         .userName {
           font-size: 24px;
         }
         .userRegion {
+          font-size: 15px;
           margin: 12px 0px 0px 2px;
           min-width: 180px;
         }
         .userMileage {
-          font-size: 18px;
-          margin: 14px 0px 0px 4px;
+          font-size: 16px;
+          margin: 10px 0px 0px 4px;
+        }
+        .logout {
+          cursor: pointer;
+          width: 66px;
+          height: 26px;
+          margin: 8px 0px 0px 3px;
         }
       }
     }
     .purchaseLine {
-      margin: 24px 0px 14px;
+      margin: 18px 0px 14px;
     }
     .giftList {
       overflow-y: scroll;
