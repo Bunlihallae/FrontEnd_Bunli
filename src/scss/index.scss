@@ -11,3 +11,16 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
+
+::-webkit-scrollbar {
+  width: 8.8px;
+} /* 스크롤 바 */
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+} /* 스크롤 바 밑의 배경 */
+
+::-webkit-scrollbar-thumb {
+  background: #989898;
+  border-radius: 10px;
+} /* 실질적 스크롤 바 */

@@ -1,23 +1,16 @@
 import { useState } from "react";
-import Modal from "./modal";
+import NewModal from "./newModal";
 import React from "react";
 import NewSideBar from "../components/menuBar/newSideBar";
+import useWindowSize from "../components/useWindowSize.js";
 
 const MyPage = () => {
-  // 모달창 노출 여부 state
-  // const [modalOpen, setModalOpen] = useState(true);
-
-  // 모달창 노출
-  // const showModal = () => {
-  //   setModalOpen(true);
-  // };
-
+  const windowSize = useWindowSize();
   return (
     <div className="myPageFirstClass">
-      <NewSideBar />
-      {/* <button onClick={showModal}>모달 띄우기</button> */}
-      {/* {modalOpen && <Modal setModalOpen={setModalOpen}></Modal>} */}
-      <Modal />
+      {windowSize.width > 520 ? <NewSideBar /> : <></>}
+
+      <NewModal />
     </div>
   );
 };
