@@ -28,6 +28,15 @@ const productList = [
   },
   {
     giftId: "1",
+    region: "충청도",
+    giftName: "천안 호두과자",
+    giftPrice: "8,000",
+    giftContent: "해당 상품은 해당 지역의 특산물로 어쩌고~~~~~~~.",
+    giftImage:
+      "https://www.천안당.com/app/dubu_shop/docs/imgs/product/107112/md_db_64b086a97c18e.jpg",
+  },
+  {
+    giftId: "1",
     region: "제주도",
     giftName: "제주도 흑돼지",
     giftPrice: "20,000",

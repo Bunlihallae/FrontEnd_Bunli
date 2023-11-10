@@ -15,7 +15,7 @@ const NewSideBar = () => {
   // 휴지통 아이콘 클릭 시
   const handleOnGame = (e) => {
     // 게임으로 라우팅
-    console.log("게임 모달창 띄우기");
+    navigate("/game");
   };
 
   // 상점 아이콘 클릭 시
