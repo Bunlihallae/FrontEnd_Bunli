@@ -11,7 +11,7 @@ import {
   quiz7Check,
 } from "../../redux/slices/quizSlice";
 import { useNavigate } from "react-router-dom";
-import { getTrashDetailApi } from "../../apis/gameApi";
+import { getTrashDetailApi } from "../../apis/gameApi/gameApi";
 
 const Modal = ({ num, trash_id, trash_name, trash_image, trash_location }) => {
   const [detail, setDetail] = useState({});

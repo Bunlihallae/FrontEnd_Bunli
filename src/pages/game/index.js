@@ -3,8 +3,12 @@ import Modal from "./Modal.js";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { quizQuit } from "../../redux/slices/quizSlice.js";
-import { getTrashListApi, postGameResultApi } from "../../apis/gameApi.js";
-import NewSideBar from "../components/newSideBar.js";
+import {
+  getTrashListApi,
+  postGameResultApi,
+} from "../../apis/gameApi/gameApi.js";
+import NewSideBar from "../components/menuBar/newSideBar.js";
+import { updateMileage } from "../../redux/slices/userSlice.js";
 
 const TrashList = {
   Trash: [
@@ -63,17 +67,7 @@ const TrashList = {
 const Game = () => {
   const token = localStorage.getItem("token");
 
-  const [trashList, setTrashList] = useState({
-    Trash: [
-      {
-        trash_id: 1,
-        trash_name: "비닐코팅된 종이",
-        trash_image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgaHvaL-nlI1Klm5HP6dLFb9fd7YgwySkFwg&usqp=CAU",
-        trash_location: "일반쓰레기",
-      },
-    ],
-  });
+  const [trashList, setTrashList] = useState({});
   const getTrashList = async () => {
     try {
       await getTrashListApi().then((res) => {
@@ -141,7 +135,11 @@ const Game = () => {
       .padStart(2, "0")}`;
 
     postResult(totalMileage, todayTime, token);
-
+    dispatch(
+      updateMileage({
+        user_mileage: totalMileage,
+      })
+    );
     alert(
       `\n총 7문제중 ${num}문제를 맞추었습니다!!\n마일리지 ${plusMileage}점 획득!!`
     );
