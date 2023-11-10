@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 import productList from "./product";
 import { Link } from "react-router-dom";
 import MenuBar from "../components/menuBar.js";
-import { giftListApi } from "../../apis/giftShop.js";
+import { giftListApi } from "../../apis/giftShopApi.js";
 
 const Giftshop = () => {
   const [region, setRegion] = useState("충청도");

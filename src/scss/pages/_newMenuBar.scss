@@ -1,0 +1,26 @@
+@use "../abstracts" as *;
+
+.newMenuFirstClass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  right: 5px;
+  margin-top: 30px;
+  margin-right: 18px;
+  i {
+    font-size: 34px;
+    color: black;
+  }
+
+  .mypage {
+    font-weight: 800;
+    font-size: 20px;
+  }
+  .trash {
+    margin-top: 28px;
+  }
+  .giftshop {
+    margin-top: 28px;
+  }
+}
