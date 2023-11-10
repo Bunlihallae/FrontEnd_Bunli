@@ -6,7 +6,7 @@ import icon from "../components/img/icon.png";
 function Start() {
   const movePage = useNavigate();
   const onButtonClick = () => {
-    movePage("/home");
+    movePage("/signup");
   };
   return (
     <Container className="container">

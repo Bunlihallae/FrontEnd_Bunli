@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import productList from "./product";
 import { Link } from "react-router-dom";
-import MenuBar from "../components/menuBar.js";
-import { giftListApi } from "../../apis/giftShopApi.js";
+import MenuBar from "../components/menuBar/menuBar.js";
+import { giftListApi } from "../../apis/giftShopApi/giftShopApi.js";
 
 const Giftshop = () => {
+  const token = localStorage.getItem("token");
+
   const [region, setRegion] = useState("충청도");
 
   const click0 = () => {
@@ -40,7 +42,7 @@ const Giftshop = () => {
   return (
     <div>
       <MenuBar />
-      {/* <div className="giftshopTopClass">
+      <div className="giftshopTopClass">
         <div className="giftshopTop">
           <Link
             to="/giftshop"
@@ -86,9 +88,9 @@ const Giftshop = () => {
             );
           })}
         </div>
-      </div> */}
+      </div>
 
-      <div className="giftshopTopClass">
+      {/* <div className="giftshopTopClass">
         <div className="giftshopTop">
           <Link
             to="/giftshop"
@@ -141,7 +143,7 @@ const Giftshop = () => {
               );
             })}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

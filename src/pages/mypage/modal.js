@@ -2,10 +2,10 @@ import styles from "./modal.module.css";
 import { userInfoApi } from "../../apis/userApi";
 import { useState, useEffect } from "react";
 import "./modal.module.css";
-import logo from "../components/img/icon.png"
+import logo from "../components/img/icon.png";
 function Modal({ setModalOpen }) {
- const token = localStorage.getItem("token");
- const userInfo = async (token) => {
+  const token = localStorage.getItem("token");
+  const userInfo = async (token) => {
     try {
       await userInfoApi(token).then((res) => {
         console.log(res);
@@ -35,7 +35,7 @@ function Modal({ setModalOpen }) {
 
   return (
     <div className={styles.container}>
-        <img  className={styles.mypage__logo}src={logo} alt="logo"></img>
+      <img className={styles.mypage__logo} src={logo} alt="logo"></img>
       <button className={styles.close} onClick={closeModal}>
         X
       </button>
@@ -43,7 +43,7 @@ function Modal({ setModalOpen }) {
         <div className={styles.user__icon}>
           <i
             className="fa-solid fa-user fa-flip fa-6x"
-            style={{ color: "blue"}}
+            style={{ color: "blue" }}
           ></i>
         </div>
         <div className={styles.user__name}>{Info.user_name}</div>

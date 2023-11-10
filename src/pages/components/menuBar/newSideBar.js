@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import recyclebinImg from "../../assets/recylebinImg.png";
-import storeImg from "../../assets/storeImg.svg";
-import userImg from "../../assets/userImg.svg";
+import recyclebinImg from "../../../assets/recylebinImg.png";
+import storeImg from "../../../assets/storeImg.svg";
+import userImg from "../../../assets/userImg.svg";
 
 const NewSideBar = () => {
   const navigate = useNavigate();
