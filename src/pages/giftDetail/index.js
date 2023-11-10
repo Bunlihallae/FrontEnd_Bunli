@@ -2,7 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import productList from "../giftshop/product";
 import React, { useEffect, useState } from "react";
 import MenuBar from "../components/menuBar.js";
-import { giftDetailApi, orderGiftApi } from "../../apis/giftShop.js";
+import { giftDetailApi, orderGiftApi } from "../../apis/giftShopApi.js";
 
 const GiftDetail = () => {
   const token = localStorage.getItem("token");

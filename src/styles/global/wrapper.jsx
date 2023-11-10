@@ -6,6 +6,7 @@ const Wrapper = styled.div`
     line-height: 1;
     list-style: none;
     width: 1200px;
-`
+    background-img
+`;
 
 export default Wrapper;
