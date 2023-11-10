@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { userInfoApi } from "../../apis/userApi.js";
 import { useDispatch } from "react-redux";
 import { login } from "../../redux/slices/userSlice.js";
-import Modal from "./modal";
+import  { LipStick,ToothPaste,RubbyGlove } from "../hint/hint"
 function Body() {
   const token = localStorage.getItem("token");
   const dispatch = useDispatch();
@@ -115,12 +115,10 @@ function Body() {
     //상점으로 라우팅
     navigate("/giftshop");
   };
-  const handleOnLipStick = () => {
-
-    return (
-      <Modal></Modal>
-    )
+  const HandleOnLipStick = () => {
+  
   };
+
   return (
     <HomeBody>
       <div id="background">
@@ -128,18 +126,21 @@ function Body() {
           <Timer hh="24" mm="0" ss="0" />
         </div>
         <div id="iconBox">
+          
           <p id="mypage" onClick={handleOnMypage}></p>
           <p id="font1">마이페이지</p>
           <p id="game" onClick={handleOnGame}></p>
           <p id="font2">게임시작</p>
           <p id="store" onClick={handleOnStore}></p>
           <p id="font3">상점</p>
-          <p id="lipStick" onClick={handleOnLipStick}></p>
-          <p id="font3">립스틱</p>
-          <p id="rubbyGlove" onClick={handleOnLipStick}></p>
-          <p id="font3">고무장갑</p>
-          <p id="toothPaste" onClick={handleOnLipStick}></p>
-          <p id="font3">치약</p>
+          
+          
+          <LipStick></LipStick>
+          
+          <RubbyGlove></RubbyGlove>
+          
+          <ToothPaste></ToothPaste>
+          
         </div>
       </div>
     </HomeBody>
